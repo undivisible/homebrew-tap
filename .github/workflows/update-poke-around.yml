@@ -1,0 +1,87 @@
+name: Update poke-around formula
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # check hourly
+  workflow_dispatch:        # allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest release and update formula
+        run: |
+          # Get latest release info from public API (no token needed)
+          RELEASE=$(curl -sf https://api.github.com/repos/undivisible/poke-around/releases/latest)
+          VERSION=$(echo "$RELEASE" | python3 -c "import sys,json; print(json.load(sys.stdin)['tag_name'])")
+          VER="${VERSION#v}"
+
+          echo "Latest release: $VERSION"
+
+          # Check if formula already matches this version
+          CURRENT=$(grep -oP 'version "\K[^"]+' Formula/poke-around.rb || echo "none")
+          if [ "$CURRENT" = "$VER" ]; then
+            echo "Formula already at $VER — nothing to do."
+            exit 0
+          fi
+
+          BASE="https://github.com/undivisible/poke-around/releases/download/${VERSION}"
+
+          # Download assets and compute SHAs
+          curl -sfL "${BASE}/poke-around-macos-aarch64.tar.gz" -o macos-arm.tar.gz
+          curl -sfL "${BASE}/poke-around-macos-x86_64.tar.gz"  -o macos-x86.tar.gz
+          curl -sfL "${BASE}/poke-around-linux-x86_64.tar.gz"  -o linux-x86.tar.gz
+
+          SHA_MACOS_ARM=$(sha256sum macos-arm.tar.gz | cut -d' ' -f1)
+          SHA_MACOS_X86=$(sha256sum macos-x86.tar.gz | cut -d' ' -f1)
+          SHA_LINUX_X86=$(sha256sum linux-x86.tar.gz | cut -d' ' -f1)
+
+          cat > Formula/poke-around.rb <<EOF
+          class PokeAround < Formula
+            desc "Expose your machine to your Poke AI assistant via an MCP tunnel"
+            homepage "https://github.com/undivisible/poke-around"
+            license "MPL-2.0"
+            version "${VER}"
+
+            on_macos do
+              on_arm do
+                url "${BASE}/poke-around-macos-aarch64.tar.gz"
+                sha256 "${SHA_MACOS_ARM}"
+              end
+              on_intel do
+                url "${BASE}/poke-around-macos-x86_64.tar.gz"
+                sha256 "${SHA_MACOS_X86}"
+              end
+            end
+
+            on_linux do
+              on_intel do
+                url "${BASE}/poke-around-linux-x86_64.tar.gz"
+                sha256 "${SHA_LINUX_X86}"
+              end
+            end
+
+            depends_on "node"
+
+            def install
+              bin.install "poke-around"
+              bin.install "poke-around-bridge.js"
+              bin.install "menubar_linux.py" if File.exist?("menubar_linux.py")
+            end
+
+            test do
+              assert_match "poke-around", shell_output("\#{bin}/poke-around --help")
+            end
+          end
+          EOF
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Formula/poke-around.rb
+          git commit -m "chore: update poke-around to ${VERSION}"
+          git push
