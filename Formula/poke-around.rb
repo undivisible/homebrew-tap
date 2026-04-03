@@ -4,13 +4,13 @@ class PokeAround < Formula
   license "MPL-2.0"
   head "https://github.com/undivisible/poke-around.git", branch: "main"
 
-  depends_on "bun" => :build
+  depends_on "node"
   depends_on "zig" => :build
 
   def install
-    system "bun", "install", "--frozen-lockfile"
-    system "bun", "build", "bridge/poke-bridge.ts",
-           "--bundle", "--target=node",
+    system "npm", "install", "--save-dev", "esbuild"
+    system "npx", "esbuild", "bridge/poke-bridge.ts",
+           "--bundle", "--platform=node",
            "--outfile=bridge/dist/poke-around-bridge.js"
     system "zig", "build", *std_zig_args
     bin.install "zig-out/bin/poke-around"
