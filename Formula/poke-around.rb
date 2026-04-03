@@ -7,18 +7,18 @@ class PokeAround < Formula
   on_macos do
     on_arm do
       url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-macos-aarch64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "4c60e61338b3023fba3d12bcf9ad85d8f694161f0faadb626c4f22b042127397"
     end
     on_intel do
       url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-macos-x86_64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "273fe8fd3e45431287c2aca7f0b1e076dfdaea9d323443361c3037f412e08aaf"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-linux-x86_64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "3def9ea22e80ce7c4e5afa0adc9682aa402081746d55f57ba43041ab84f0efed"
     end
   end
 
