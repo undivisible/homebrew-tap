@@ -2,19 +2,32 @@ class PokeAround < Formula
   desc "Expose your machine to your Poke AI assistant via an MCP tunnel"
   homepage "https://github.com/undivisible/poke-around"
   license "MPL-2.0"
-  head "https://github.com/undivisible/poke-around.git", branch: "main"
+  version "0.3.2"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-macos-aarch64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    end
+    on_intel do
+      url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-macos-x86_64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-linux-x86_64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    end
+  end
 
   depends_on "node"
-  depends_on "zig" => :build
 
   def install
-    system "npm", "install", "--save-dev", "esbuild"
-    system "npx", "esbuild", "bridge/poke-bridge.ts",
-           "--bundle", "--platform=node",
-           "--outfile=bridge/dist/poke-around-bridge.js"
-    system "zig", "build", *std_zig_args
-    bin.install "zig-out/bin/poke-around"
-    bin.install "bridge/dist/poke-around-bridge.js" => "poke-around-bridge.js"
+    bin.install "poke-around"
+    bin.install "poke-around-bridge.js"
+    bin.install "menubar_linux.py" if File.exist?("menubar_linux.py")
   end
 
   test do
