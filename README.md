@@ -6,5 +6,6 @@ Homebrew tap for tooling I ship.
 
 ```bash
 brew tap undivisible/homebrew-tap
+brew install unthinkclaw
 brew install --HEAD poke-around
 ```
