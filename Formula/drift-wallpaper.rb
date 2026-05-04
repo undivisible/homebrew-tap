@@ -1,9 +1,9 @@
 class DriftWallpaper < Formula
-  desc "Fluid live wallpaper for macOS"
+  desc "Fluid live wallpaper for macOS, Windows, and Linux"
   homepage "https://github.com/undivisible/drift-wallpaper"
   version "0.1.0"
   license "MPL-2.0"
-  head "https://github.com/undivisible/drift-wallpaper.git", branch: "cross-platform-port"
+  head "https://github.com/undivisible/drift-wallpaper.git", branch: "m"
 
   depends_on "rust" => :build
 
