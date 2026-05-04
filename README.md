@@ -5,7 +5,10 @@ Homebrew tap for tooling I ship.
 ## Install
 
 ```bash
-brew tap undivisible/homebrew-tap
-brew install unthinkclaw
-brew install --HEAD poke-around
+brew tap undivisible/tap
+brew install --HEAD drift-wallpaper
 ```
+
+## Formulae
+
+- `drift-wallpaper` - Fluid live wallpaper for macOS
