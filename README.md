@@ -5,8 +5,8 @@ Homebrew tap for tooling I ship.
 ## Install
 
 ```bash
-brew tap undivisible/tap
-brew install --HEAD drift-wallpaper
+wax tap undivisible/tap
+wax install --head drift-wallpaper
 ```
 
 One-line installer:
