@@ -21,7 +21,7 @@ class DriftWallpaper < Formula
   end
 
   def install
-    bin.install "drift-wallpaper"
+    bin.install Dir["drift-wallpaper-*"].first => "drift-wallpaper"
   end
 
   test do
