@@ -25,6 +25,6 @@ class DriftWallpaper < Formula
   end
 
   test do
-    assert_match "drift-wallpaper", shell_output("#{bin}/drift-wallpaper --version")
+    assert_match "drift-wallpaper", shell_output("#{bin}/drift-wallpaper --help")
   end
 end
