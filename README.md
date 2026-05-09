@@ -1,26 +1,14 @@
-# undivisible/homebrew-tap
+# homebrew-tap
 
-Homebrew tap for tooling I ship.
+Personal Homebrew formulae.
 
-## Install
+## vro
 
-```bash
-wax tap undivisible/tap
-wax install --head drift-wallpaper
+Minimal terminal text editor: [undivisible/vro](https://github.com/undivisible/vro).
+
+```sh
+brew tap undivisible/tap https://github.com/undivisible/homebrew-tap
+brew install --HEAD vro
 ```
 
-One-line installer:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/undivisible/drift-wallpaper/m/scripts/install.sh | bash
-```
-
-Windows source install:
-
-```powershell
-powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/undivisible/drift-wallpaper/m/scripts/install.ps1 | iex"
-```
-
-## Formulae
-
-- `drift-wallpaper` - Fluid live wallpaper for macOS, Windows, and Linux
+Requires [V](https://vlang.io/) (`vlang` formula) to build from source.
