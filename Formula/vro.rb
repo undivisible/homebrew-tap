@@ -1,7 +1,7 @@
 class Vro < Formula
   desc "Minimal terminal text editor (micro-inspired)"
   homepage "https://github.com/undivisible/vro"
-  license "MIT"
+  license "MPL-2.0"
   version "0.1.0"
 
   on_macos do
