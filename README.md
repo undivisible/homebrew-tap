@@ -18,4 +18,4 @@ brew install vro
 
 Release assets include `*.sha256` for manual verification (`shasum -a 256 -c …`).
 
-**v0.3.0:** until the GitHub release is published, `Formula/vro.rb` may still carry placeholder `sha256` values — run `bash /path/to/vro/scripts/print-release-shas.sh v0.3.0` after the tag build finishes and paste the hashes before relying on `brew install vro`.
+Formula checksums are refreshed when tagging a new `v*` release: `bash /path/to/vro/scripts/print-release-shas.sh v0.3.1` (example).
