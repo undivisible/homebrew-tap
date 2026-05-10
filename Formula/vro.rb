@@ -2,19 +2,23 @@ class Vro < Formula
   desc "Minimal terminal text editor (micro-inspired)"
   homepage "https://github.com/undivisible/vro"
   license "MPL-2.0"
-  version "0.1.0"
+  version "0.3.0"
+
+  # After CI publishes the v0.3.0 release assets, refresh checksums:
+  #   bash path/to/vro/scripts/print-release-shas.sh v0.3.0
+  # and paste the two lines into the sha256 stanzas below (macOS arm + Linux x86_64).
 
   on_macos do
     on_arm do
-      url "https://github.com/undivisible/vro/releases/download/v0.1.0/vro-macos-aarch64.tar.gz"
-      sha256 "84713e095bd13f8f73d0e3f4a399547ecb8dd8ccb4d9ad96ab3456f2c128b40e"
+      url "https://github.com/undivisible/vro/releases/download/v0.3.0/vro-macos-aarch64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/undivisible/vro/releases/download/v0.1.0/vro-linux-x86_64.tar.gz"
-      sha256 "0040ebc17da2a2bb4895551c9be5e987d2c80403c1d076966e683625fa00017e"
+      url "https://github.com/undivisible/vro/releases/download/v0.3.0/vro-linux-x86_64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end
 
