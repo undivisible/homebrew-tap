@@ -2,19 +2,19 @@ class Vro < Formula
   desc "Minimal terminal text editor (micro-inspired)"
   homepage "https://github.com/undivisible/vro"
   license "MPL-2.0"
-  version "0.3.5"
+  version "0.3.7"
 
   on_macos do
     on_arm do
-      url "https://github.com/undivisible/vro/releases/download/v0.3.5/vro-macos-aarch64.tar.gz"
-      sha256 "803ad191ea4eed719c62f93544a0b60aa46a4d220f1849c2104fddbb349baa5b"
+      url "https://github.com/undivisible/vro/releases/download/v0.3.7/vro-macos-aarch64.tar.gz"
+      sha256 "ce958a60870cc0cafb3488dbc4587420d397b48630690ca82405c3f133ca5c02"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/undivisible/vro/releases/download/v0.3.5/vro-linux-x86_64.tar.gz"
-      sha256 "8ba7640c2aeae015cc13e55d51b428afdfd07d3bf78dc5079fab42a6aa654808"
+      url "https://github.com/undivisible/vro/releases/download/v0.3.7/vro-linux-x86_64.tar.gz"
+      sha256 "5e32e04400e6bdcbd0ce33451cdc673662b533dc8270e7d35fdf7dbba5ada456"
     end
   end
 
