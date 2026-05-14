@@ -7,19 +7,24 @@ class Vro < Formula
   on_macos do
     on_arm do
       url "https://github.com/undivisible/vro/releases/download/v1.0.1/vro-macos-aarch64.tar.gz"
-      sha256 "1c9a2c2b46707acf752de13d1d67215a41421e18baf69e78d30f0aafb29e2967"
+      sha256 "aa7f7b232a6687aa3e111430a5297a3b07430e822ce5b3ff3e1c75049aeb6e27"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/undivisible/vro/releases/download/v1.0.1/vro-linux-x86_64.tar.gz"
-      sha256 "7cf1f9e02221324ad5debcfb81835acb76008aa2dabf0e63dc2dbb79c1fa463b"
+      sha256 "c5942579cf6911f9a84b0fa9774924da4a7db4acd23c42eed20c6263516cacc1"
+    end
+    on_arm do
+      url "https://github.com/undivisible/vro/releases/download/v1.0.1/vro-linux-aarch64.tar.gz"
+      sha256 "ea39b77298c38d5948ec54bfeae237c70717f62054d9b0544b34673cd815ede6"
     end
   end
 
   def install
     bin.install "vro"
+    (share/"vro/syntax").install Dir["syntax/*"]
   end
 
   test do
