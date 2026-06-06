@@ -2,23 +2,23 @@ class PokeAround < Formula
   desc "Expose your machine to your Poke AI assistant via an MCP tunnel"
   homepage "https://github.com/undivisible/poke-around"
   license "MPL-2.0"
-  version "0.3.2"
+  version "0.3.12"
 
   on_macos do
     on_arm do
-      url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-macos-aarch64.tar.gz"
-      sha256 "4c60e61338b3023fba3d12bcf9ad85d8f694161f0faadb626c4f22b042127397"
+      url "https://github.com/undivisible/poke-around/releases/download/v0.3.12/poke-around-macos-aarch64.tar.gz"
+      sha256 "6b8112d882e9d8c9920766a6e88aec4b1b50edc6c7777d1fe0c70f3bf32715ff"
     end
     on_intel do
-      url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-macos-x86_64.tar.gz"
-      sha256 "273fe8fd3e45431287c2aca7f0b1e076dfdaea9d323443361c3037f412e08aaf"
+      url "https://github.com/undivisible/poke-around/releases/download/v0.3.12/poke-around-macos-x86_64.tar.gz"
+      sha256 "75ad09bda8fc6a8afe5581cd503cf2bb8c08e23da2d5c6c81f41f3590982a5b3"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/undivisible/poke-around/releases/download/v0.3.2/poke-around-linux-x86_64.tar.gz"
-      sha256 "3def9ea22e80ce7c4e5afa0adc9682aa402081746d55f57ba43041ab84f0efed"
+      url "https://github.com/undivisible/poke-around/releases/download/v0.3.12/poke-around-linux-x86_64.tar.gz"
+      sha256 "6e37b0670a07ee153661d03d4bab9097c3973a4924f4170c33115a3c5d05ef49"
     end
   end
 
@@ -31,6 +31,6 @@ class PokeAround < Formula
   end
 
   test do
-    assert_match "poke-around", shell_output("#{bin}/poke-around --help")
+    assert_match "poke-around", shell_output("\#{bin}/poke-around --help")
   end
 end
