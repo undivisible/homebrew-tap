@@ -2,27 +2,27 @@ class FolkAround < Formula
   desc "Rust MCP agent for computer control"
   homepage "https://folkaround.undivisible.dev"
   license "MPL-2.0"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/undivisible/folk-around/releases/download/v0.3.1/folk-around-darwin-aarch64"
-      sha256 "4fffd0ebe4015c8dbb56c46d0888576ad5579c53f2052cb89ace1038f5c7f54e"
+      url "https://github.com/undivisible/folk-around/releases/download/v0.3.2/folk-around-darwin-aarch64"
+      sha256 "0b3ba3f7a7dcd2670bdc0759d12bae349713a3fb47f233fdede5b743b5ad1a64"
     end
     on_intel do
-      url "https://github.com/undivisible/folk-around/releases/download/v0.3.1/folk-around-darwin-x86_64"
-      sha256 "d9368e10fedb6d3e4ef5b730832f7715c60a3aa9b177b51aa1c8c530bbb45d50"
+      url "https://github.com/undivisible/folk-around/releases/download/v0.3.2/folk-around-darwin-x86_64"
+      sha256 "40396b90f55f6cfca6a3d931d7d85ab2b278c58861383c66e0ee857538cf18e0"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/undivisible/folk-around/releases/download/v0.3.1/folk-around-linux-aarch64"
-      sha256 "eb4093762fabfdb1c4592dbb2e3b82185bd0cebcd97cdc7788bc2de3ec96f2b3"
+      url "https://github.com/undivisible/folk-around/releases/download/v0.3.2/folk-around-linux-aarch64"
+      sha256 "3118c659c55d53fc7b609a9d1ba7e7f7030b3f98c48aea01f006c75676eff9e6"
     end
     on_intel do
-      url "https://github.com/undivisible/folk-around/releases/download/v0.3.1/folk-around-linux-x86_64"
-      sha256 "6b19653a12d3e93217cf1911eb709b35b10c186572a6e1ab570647a6875d91cd"
+      url "https://github.com/undivisible/folk-around/releases/download/v0.3.2/folk-around-linux-x86_64"
+      sha256 "218f8179b095d35eaa7d95a94bc4b2c624244c8b8a4a6cdbc028da32eb01dee8"
     end
   end
 
