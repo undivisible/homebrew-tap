@@ -31,7 +31,6 @@ class PokeAround < Formula
   def install
     bin.install "poke-around"
     bin.install "poke-around-bridge.js"
-    bin.install "menubar_linux.py" if File.exist?("menubar_linux.py")
   end
 
   test do
