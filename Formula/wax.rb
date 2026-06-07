@@ -1,8 +1,8 @@
 class Wax < Formula
   desc "Fast Homebrew-compatible package manager"
   homepage "https://github.com/tschk/wax"
-  url "https://github.com/tschk/wax/archive/refs/tags/v0.17.8.tar.gz"
-  sha256 "daf4d0bbe827fa1f54b5ae8e14b4e1c4073b7c0b2d72bdbc5c9b74bd3d7bb2b8"
+  url "https://github.com/tschk/wax/archive/refs/tags/v0.17.11.tar.gz"
+  sha256 "f7d7df203121aa4f9772852541d227e67c1f72640700bdb1a7b699dc607ce810"
   head "https://github.com/tschk/wax.git", branch: "master"
   license "MIT"
 
