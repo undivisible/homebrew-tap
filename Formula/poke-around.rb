@@ -1,36 +1,33 @@
 class PokeAround < Formula
   desc "Expose your machine to your Poke AI assistant via an MCP tunnel"
   homepage "https://github.com/undivisible/poke-around"
+  version "0.5.4"
   license "MPL-2.0"
-  version "0.3.16"
 
   on_macos do
     on_arm do
-      url "https://github.com/undivisible/poke-around/releases/download/v0.3.16/poke-around-macos-aarch64.tar.gz"
-      sha256 "552e459d7610aa4bba1a05bef8ac84a30dd06feb369de8c0778a7876ec4676d0"
+      url "https://github.com/undivisible/poke-around/releases/download/v0.5.4/poke-around-macos-aarch64.tar.gz"
+      sha256 "8fd8364ae18309c08e5c5718a746fcd5c47251c1194969d6a1bae3b222fdf96c"
     end
     on_intel do
-      url "https://github.com/undivisible/poke-around/releases/download/v0.3.16/poke-around-macos-x86_64.tar.gz"
-      sha256 "29b31e10b3a770941b1d154f457b4fa875f27d611096ea5971acc0aff09dc2b8"
+      url "https://github.com/undivisible/poke-around/releases/download/v0.5.4/poke-around-macos-x86_64.tar.gz"
+      sha256 "0080e028ba1955e9d8f402e05d94f6c53f413ea3a87b68ec51117976aa24828f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/undivisible/poke-around/releases/download/v0.3.16/poke-around-linux-aarch64.tar.gz"
-      sha256 "4ecd78c29674ea50abed767935cf8935d3b7d813a31b0bc04b27b5d5c81b2802"
+      url "https://github.com/undivisible/poke-around/releases/download/v0.5.4/poke-around-linux-aarch64.tar.gz"
+      sha256 "1bd4fbf95e04148f2ff953febd3282b268eb893f53bf7be8e6d45e240ba291bf"
     end
     on_intel do
-      url "https://github.com/undivisible/poke-around/releases/download/v0.3.16/poke-around-linux-x86_64.tar.gz"
-      sha256 "d3a5ffe9e64fe39ef2bb840fc048b2ad93cb1f8cefeec371b1dd3fee170b3444"
+      url "https://github.com/undivisible/poke-around/releases/download/v0.5.4/poke-around-linux-x86_64.tar.gz"
+      sha256 "620e3c771bad46fac41416381b4fce9ab8ee84270e5ad3cac7c48a9545886a13"
     end
   end
 
-  depends_on "node"
-
   def install
     bin.install "poke-around"
-    bin.install "poke-around-bridge.js"
   end
 
   test do
