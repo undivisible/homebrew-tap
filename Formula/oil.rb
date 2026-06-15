@@ -2,7 +2,7 @@ class Oil < Formula
   desc "Native Linux package manager with system-PM interop"
   homepage "https://github.com/semitechnological/oil"
   url "https://github.com/semitechnological/oil/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "027c649fd2e16af83fcb680104a0ec2757cdc5a5a57a664f43f6621a2b57a790"
+  sha256 "7bcaa4f827e8c4fc2249f36d7a9eeae4078a88500b7a717564cea51edbf9a195"
   head "https://github.com/semitechnological/oil.git", branch: "master"
   license "MIT"
 
