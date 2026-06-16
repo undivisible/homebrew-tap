@@ -4,7 +4,7 @@ class Oil < Formula
   url "https://github.com/semitechnological/oil/archive/refs/tags/v0.2.0.tar.gz"
   sha256 "01a854872afeca4353ac97dfc28155d14fffb1f9ef2e2f60fc5987dc1dd88126"
   head "https://github.com/semitechnological/oil.git", branch: "master"
-  license "MIT"
+  license "MPL-2.0"
 
   depends_on "rust" => :build
 
