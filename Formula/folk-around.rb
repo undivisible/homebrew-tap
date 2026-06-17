@@ -7,22 +7,22 @@ class FolkAround < Formula
   on_macos do
     on_arm do
       url "https://github.com/undivisible/folk-around/releases/download/v0.3.4/folk-around-darwin-aarch64"
-      sha256 "35b8c6be0b39def15e6e28ab11696139f4ec4c2801c6819f481c471f9c8bb1a0"
+      sha256 "6bccb05c0b618bde6b32d84306e3df8c0d0d6a0b0d5399c889c563c312477fe6"
     end
     on_intel do
       url "https://github.com/undivisible/folk-around/releases/download/v0.3.4/folk-around-darwin-x86_64"
-      sha256 "11327fa79f7027cd6c73a57ae56ebc1ea3e5195a3446fce3223b4822e1320c7a"
+      sha256 "8b2bf9ff51d84cabaa33cc120d9100ed368c200a199f9935c2c9761b66ce30f3"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/undivisible/folk-around/releases/download/v0.3.4/folk-around-linux-aarch64"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "223f8e2172924e7521d93178302f2e0cbcb004f83d269e19ab338d9be8144010"
     end
     on_intel do
       url "https://github.com/undivisible/folk-around/releases/download/v0.3.4/folk-around-linux-x86_64"
-      sha256 "c4c7421210b81c84c622165266aecf7142258ba61a46f245d62dc2ac8772af7b"
+      sha256 "9943758a2d7092731ce0878a2256ce4ebd575be4489d3a299a760045f8af2508"
     end
   end
 
