@@ -22,7 +22,7 @@ Formula checksums are refreshed when tagging a new `v*` release: `bash /path/to/
 
 ## wax
 
-Fast, modern package manager leveraging Homebrew's ecosystem: [tschk/wax](https://github.com/tschk/wax). Built in Rust for speed and reliability, provides 16-20x faster search operations and parallel installation workflows.
+Fast, modern package manager leveraging Homebrew's ecosystem: [plyght/wax](https://github.com/plyght/wax). Built in Rust for speed and reliability, provides 16-20x faster search operations and parallel installation workflows.
 
 ```sh
 wax tap undivisible/tap
