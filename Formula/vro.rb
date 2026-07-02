@@ -9,7 +9,7 @@ class Vro < Formula
   on_macos do
     on_arm do
       url "https://github.com/undivisible/vro/releases/download/v1.2.0/vro-macos-aarch64.tar.gz"
-      sha256 "42d98871c5d52b908b416f891295048b9a49c9188a24c309270587d4687be17b"
+      sha256 "e17990bf8e2b97a0d737281d3fbbc2a7f87b865317c48a0014450cea3e87c18a"
     end
   end
 
@@ -17,11 +17,11 @@ class Vro < Formula
   on_linux do
     on_x86_64 do
       url "https://github.com/undivisible/vro/releases/download/v1.2.0/vro-linux-x86_64.tar.gz"
-      sha256 "4fd1ef0f3ca606b12000ab875aa0397b24640227699041ce507fb0258529c849"
+      sha256 "80e0f7ca8fa926092c56164a27c9ae234779ef820a6d3c0fab0ae79409287c8c"
     end
     on_arm do
       url "https://github.com/undivisible/vro/releases/download/v1.2.0/vro-linux-aarch64.tar.gz"
-      sha256 "bcca56783b2cbee56ef17f3ef931a5531964204c48686a4d98950a683895900b"
+      sha256 "8b95ed146a48d790eb2953e9dea59126b5f9ac0af6a94c6970aeef9ef23d9ddb"
     end
   end
 
