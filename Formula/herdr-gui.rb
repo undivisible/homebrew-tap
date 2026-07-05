@@ -1,8 +1,8 @@
 class HerdrGui < Formula
   desc "macOS GUI for Herdr"
   homepage "https://github.com/undivisible/herdr-gui"
-  license "MPL-2.0"
   version "0.1.0"
+  license "MPL-2.0"
   head "https://github.com/undivisible/herdr-gui.git", branch: "master"
 
   # macOS – Apple Silicon (ARM64)
