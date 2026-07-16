@@ -1,8 +1,8 @@
 class Tk < Formula
   desc "CLI + TUI host for the rotary (rx4) agent harness engine"
   homepage "https://github.com/semitechnological/telekinesis"
-  url "https://github.com/semitechnological/telekinesis/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "700b71e8961bc329777349a834a9cfb77acfca9ed3885ddd5f56c46925f7cce2"
+  url "https://github.com/semitechnological/telekinesis/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "2ea138fc717f081175c18872793bc937fe45ca46e01f429cdc8efc1319feef13"
   head "https://github.com/semitechnological/telekinesis.git", branch: "main"
   license "MPL-2.0"
 
