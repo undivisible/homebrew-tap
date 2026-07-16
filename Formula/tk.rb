@@ -1,8 +1,8 @@
 class Tk < Formula
   desc "AI coding agent TUI — rx4 harness + crepuscularity-tui"
   homepage "https://github.com/semitechnological/telekinesis"
-  url "https://github.com/semitechnological/telekinesis/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "acb4d19a66d054a0b92c391d7813f29e300ea1e21d20d81bb7a272a1d5f1c0b2"
+  url "https://github.com/semitechnological/telekinesis/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "48442dee536386d1a4aae1551503cf051b227b762f0ce89ce0e5840198e0a2ea"
   head "https://github.com/semitechnological/telekinesis.git", branch: "main"
   license "MPL-2.0"
 
