@@ -2,28 +2,28 @@ class Tk < Formula
   desc "AI coding agent TUI — rx4 harness + crepuscularity-tui"
   homepage "https://github.com/semitechnological/telekinesis"
   license "MPL-2.0"
-  version "0.2.18"
+  version "0.2.19"
   head "https://github.com/semitechnological/telekinesis.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.18/tk-aarch64-apple-darwin.tar.gz"
-      sha256 "39d387fe048a8abc35c1d99f1bc7b107ee0c5fa875bdc5271af5f267df64b4a3"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.19/tk-aarch64-apple-darwin.tar.gz"
+      sha256 "72924818fdbfc495c5e20d8a7a5e0cecd2b4501ddf1856b651808c16797b9820"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.18/tk-x86_64-apple-darwin.tar.gz"
-      sha256 "9c9032f1a9ebbc2b99177eeacfe5b24ee253e68d696deb3e1c912a644268c3e1"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.19/tk-x86_64-apple-darwin.tar.gz"
+      sha256 "c09f62cfa1b92a1fa9d29c1081b4bc5cfdc1dc185935e877029a339dcf68046d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.18/tk-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7dc76aabd37776e69cf0fcb41bcf37139219295c0eac34095bf9fae961522714"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.19/tk-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "cf26c32f8d088eb08a23fc481cf060b94666cd8a898c05e1c39ee3d3d8f9bf31"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.18/tk-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "c3891968b635402131dcccc8bf2a66f1a6828a75b51803b81173d700199574de"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.19/tk-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e51467421d9f9599f6fc62cc75ef7e87dd639820fad597305534649b258eb360"
     end
   end
 
