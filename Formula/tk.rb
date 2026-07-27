@@ -2,28 +2,28 @@ class Tk < Formula
   desc "AI coding agent TUI — rx4 harness + crepuscularity-tui"
   homepage "https://github.com/semitechnological/telekinesis"
   license "MPL-2.0"
-  version "0.2.16"
+  version "0.2.17"
   head "https://github.com/semitechnological/telekinesis.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.16/tk-aarch64-apple-darwin.tar.gz"
-      sha256 "8a3844bea424a8ee59ac0859e164fb2ae467e92fb4f9c8f2e49df79b96c6830a"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.17/tk-aarch64-apple-darwin.tar.gz"
+      sha256 "9967a4aef7da42e998af45348b7c029724518399f9f61817ef1460b8a9a55e1f"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.16/tk-x86_64-apple-darwin.tar.gz"
-      sha256 "9e86f2515589eb9d3340de2521c7e37fdb554c5aa598d52fb19b1cda372fe0b1"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.17/tk-x86_64-apple-darwin.tar.gz"
+      sha256 "3bb526c8088d43ba5a39d815915dcc335a998196020db50163aa468f22acb7ce"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.16/tk-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e101ec4d48bb17653b8ae63428a74b633ba74d5e8a0c34a34e875e48033ead59"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.17/tk-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "29589c57f9f9fdb466aa36d5b482e956807fea72839f3a0ddda687ae6584d46b"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.16/tk-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "24b4e296702b71d15dbcacb456e17958a61bd418c66da7d06039b2cf7c5daf81"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.17/tk-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "90cf0788c965092489a7b37829666bd25399e3b27ccea5db01c4c7f4a91a38c9"
     end
   end
 
