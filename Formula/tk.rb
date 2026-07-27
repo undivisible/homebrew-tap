@@ -2,28 +2,28 @@ class Tk < Formula
   desc "AI coding agent TUI — rx4 harness + crepuscularity-tui"
   homepage "https://github.com/semitechnological/telekinesis"
   license "MPL-2.0"
-  version "0.2.20"
+  version "0.2.21"
   head "https://github.com/semitechnological/telekinesis.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.20/tk-aarch64-apple-darwin.tar.gz"
-      sha256 "716581d1bef36ebb27dee41e5442a55bb0bc6161a81af6274e39a86c63cd00aa"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.21/tk-aarch64-apple-darwin.tar.gz"
+      sha256 "6fe41c737a84260efb0ee41fdaa0ccbdb29f47a377a59f5eb180e19daa0d3ad7"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.20/tk-x86_64-apple-darwin.tar.gz"
-      sha256 "21c463d11c7a246d62af77c6fa7408e69aeed836eb6610caa18d33bd6276965d"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.21/tk-x86_64-apple-darwin.tar.gz"
+      sha256 "aaae96a14ab4979b0b36a957538d83a1265ba1816daff8308274bb7687c2bf46"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.20/tk-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "864db4d203fb10f460b79bccc06c23f8ddceb35af4005e2955dd89e91796cdab"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.21/tk-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "9e8c4d035c97c1d1e7da6dbd16c5dd6dd8a486340ba7fd27566bd5f70b199cb7"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.20/tk-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e52758c212a12df534086ebe44a2814a6fa69a37ff28bd9d5b28168e542840ed"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.2.21/tk-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "43802d2a9017c05ac8c192fdf24c53685e87f96cf40643f7d55086b105fa152d"
     end
   end
 
