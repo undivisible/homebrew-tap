@@ -2,28 +2,28 @@ class Tk < Formula
   desc "AI coding agent TUI — rx4 harness + crepuscularity-tui"
   homepage "https://github.com/semitechnological/telekinesis"
   license "MPL-2.0"
-  version "0.3.6"
+  version "0.4.0"
   head "https://github.com/semitechnological/telekinesis.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.3.6/tk-aarch64-apple-darwin.tar.gz"
-      sha256 "6618e4c7671b0372243a3011f969a717e0ae4c30d96ee01e156f8a74acea86e1"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.4.0/tk-aarch64-apple-darwin.tar.gz"
+      sha256 "b587576b592aecaf11874b4e8dc91d850156fd36a8556b8925274b005db4c2a8"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.3.6/tk-x86_64-apple-darwin.tar.gz"
-      sha256 "776c2fd5b01dd195801be7b08c6f43b8ce0b989098d6026e753df25ce1b0ee7b"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.4.0/tk-x86_64-apple-darwin.tar.gz"
+      sha256 "1736cbb4d2df3371f703f6a48b34a84070a1fd539733e706e85ed2c343ac2a99"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.3.6/tk-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b3d7faae18aee4cd7b87783412741bb5b4d878fccee7f72262471d34fd9afbee"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.4.0/tk-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5c7be1e7dc6d8f7594713e1a7156d4dd42ab9511aad28f6742f8c330c991885e"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/v0.3.6/tk-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e4630d27fb4cc91911294aebeacb3a577f3de8dc82f24e544ef960749822b310"
+      url "https://github.com/semitechnological/telekinesis/releases/download/v0.4.0/tk-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "44271b6f3ceded1ad923499fcb20a05cc168df7231d23a132a0e1a049e40bb47"
     end
   end
 
