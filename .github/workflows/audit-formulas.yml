@@ -1,0 +1,34 @@
+name: Audit formulae
+
+on:
+  push:
+    paths:
+      - "Formula/**"
+      - "scripts/audit-formulas.sh"
+      - ".github/workflows/audit-formulas.yml"
+  pull_request:
+    paths:
+      - "Formula/**"
+      - "scripts/audit-formulas.sh"
+      - ".github/workflows/audit-formulas.yml"
+  workflow_dispatch:
+  schedule:
+    # Weekly reminder that formulae can lag releases
+    - cron: "17 8 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Ruby (formula syntax check)
+        run: ruby -v
+      - name: Audit formula versions against GitHub releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        # Non-strict by default so intentional lag / rename transitions do not red-bar the tap.
+        # Use workflow_dispatch and add --strict locally when preparing bumps.
+        run: bash scripts/audit-formulas.sh
