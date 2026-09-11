@@ -66,6 +66,34 @@ brew tap undivisible/tap https://github.com/undivisible/homebrew-tap
 brew install vro
 ```
 
+Wax and Homebrew are alternative install paths. Use one or the other for a given formula — do not mix them for the same package.
+
+### Platform coverage
+
+| Formula | Platforms |
+| --- | --- |
+| `wax` | Source build (Rust) |
+| `vro` | macOS ARM, Linux x86_64, Linux ARM |
+| `folk-around` | macOS ARM, Linux ARM, Linux x86_64 |
+| `poke-around` | macOS ARM/Intel, Linux ARM/x86_64 |
+| `drift-wallpaper` | macOS ARM, Linux x86_64 |
+| `unthinkclaw` | macOS ARM/Intel, Linux x86_64 |
+| `rs-peekaboo` | Source build (Rust) |
+| `herdr-gui` | macOS ARM only |
+| `rx4` | Source build (Rust) |
+| `tk` | macOS ARM/Intel, Linux ARM/x86_64 |
+| `oil` | Source build (Rust) |
+| `inauguration` | macOS ARM, Linux x86_64 |
+
+### Auditing the tap
+
+```sh
+bash scripts/audit-formulas.sh
+bash scripts/audit-formulas.sh --strict
+```
+
+Needs `ruby` and authenticated `gh`. `--strict` fails if any formula is stale relative to `gh release view … latest`.
+
 ## Notes
 
 - **vro** installs prebuilt GitHub Release binaries. Release assets include `*.sha256` for manual checks (`shasum -a 256 -c …`). Refresh formula checksums with `bash /path/to/vro/scripts/print-release-shas.sh v1.2.3` (example).
