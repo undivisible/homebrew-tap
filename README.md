@@ -23,6 +23,10 @@ Personal Homebrew formulae for [undivisible](https://github.com/undivisible).
 
 ## Install
 
+Two install paths are supported — **wax** (default, this tap's native package manager) and **Homebrew**. Pick one; don't mix both for the same formula.
+
+### Wax
+
 Install [wax](https://github.com/plyght/wax) first (this tap cannot bootstrap it from nothing):
 
 ```sh
@@ -59,6 +63,8 @@ wax install vro
 
 ### Homebrew
 
+The Homebrew path is an alternative to wax — use it only if you already have [Homebrew](https://brew.sh) installed:
+
 ```sh
 brew tap undivisible/tap
 # or, with an explicit URL:
@@ -66,7 +72,30 @@ brew tap undivisible/tap https://github.com/undivisible/homebrew-tap
 brew install vro
 ```
 
+Once tapped, short names work: `brew install undivisible/tap/vro` and `brew install vro` are equivalent.
+
 ## Notes
+
+### Platform coverage
+
+Prebuilt binaries are only published for the platforms listed below; source-built formulae install anywhere a Rust toolchain exists.
+
+| Formula | Prebuilt platforms | Notes |
+| --- | --- | --- |
+| `wax` | — | builds from source, needs Rust |
+| `vro` | macOS ARM, Linux x86_64 + ARM | |
+| `folk-around` | macOS ARM, Linux x86_64 + ARM | |
+| `poke-around` | macOS Intel + ARM, Linux x86_64 + ARM | |
+| `drift-wallpaper` | macOS ARM, Linux x86_64 | |
+| `apollo` | macOS Intel + ARM, Linux x86_64 | replaces `unthinkclaw` |
+| `rs-peekaboo` | — | builds from source, needs Rust |
+| `herdr-gui` | macOS ARM | Apple Silicon only |
+| `rx4` | — | builds from source, needs Rust |
+| `tk` | macOS Intel + ARM, Linux x86_64 + ARM | |
+| `oil` | — | Linux-native, builds from source, needs Rust |
+| `inauguration` | macOS ARM, Linux x86_64 | |
+
+### Verification
 
 - **vro** installs prebuilt GitHub Release binaries. Release assets include `*.sha256` for manual checks (`shasum -a 256 -c …`). Refresh formula checksums with `bash /path/to/vro/scripts/print-release-shas.sh v1.2.3` (example).
 - **apollo** replaces the old `unthinkclaw` formula. The GitHub repo `undivisible/unthinkclaw` redirects to `tschk/apollo`; install with `wax install apollo` / `brew install apollo`.
@@ -75,3 +104,12 @@ brew install vro
 - **inauguration** currently ships macOS ARM and Linux x86_64 bottles (no macOS Intel asset upstream).
 - **Missing macOS Intel bottles:** upstream releases currently omit macOS x86_64 for `vro`, `folk-around`, `inauguration`, and `herdr-gui`. Formulae only list platforms that have live release assets — do not invent Intel URLs/checksums.
 - **Version lag:** some formulae can trail GitHub “latest” (or temporarily look ahead if a tag is unpublished). Run `bash scripts/audit-formulas.sh` (add `--strict` in CI to fail on stale). Prefer verified one-off bumps over mass-bumping every formula.
+
+### Auditing the tap
+
+`scripts/audit-formulas.sh` checks every formula for Ruby syntax and for staleness (pinned version vs. the latest GitHub release tag). It needs `ruby` (for `ruby -c`) and an authenticated GitHub CLI (`gh`, for `gh release view`):
+
+```sh
+bash scripts/audit-formulas.sh              # report only
+bash scripts/audit-formulas.sh --strict     # exit non-zero if any formula is stale
+```

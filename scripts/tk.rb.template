@@ -1,28 +1,28 @@
 class Tk < Formula
   desc "AI coding agent TUI — rx4 harness + crepuscularity-tui"
-  homepage "https://github.com/semitechnological/telekinesis"
+  homepage "https://github.com/tschk/telekinesis"
   license "MPL-2.0"
   version "VERSION"
-  head "https://github.com/semitechnological/telekinesis.git", branch: "main"
+  head "https://github.com/tschk/telekinesis.git", branch: "main"
 
   on_macos do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/vVERSION/tk-aarch64-apple-darwin.tar.gz"
+      url "https://github.com/tschk/telekinesis/releases/download/vVERSION/tk-aarch64-apple-darwin.tar.gz"
       sha256 "MAC_ARM_SHA"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/vVERSION/tk-x86_64-apple-darwin.tar.gz"
+      url "https://github.com/tschk/telekinesis/releases/download/vVERSION/tk-x86_64-apple-darwin.tar.gz"
       sha256 "MAC_INTEL_SHA"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/semitechnological/telekinesis/releases/download/vVERSION/tk-aarch64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/tschk/telekinesis/releases/download/vVERSION/tk-aarch64-unknown-linux-gnu.tar.gz"
       sha256 "LINUX_ARM_SHA"
     end
     on_intel do
-      url "https://github.com/semitechnological/telekinesis/releases/download/vVERSION/tk-x86_64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/tschk/telekinesis/releases/download/vVERSION/tk-x86_64-unknown-linux-gnu.tar.gz"
       sha256 "LINUX_INTEL_SHA"
     end
   end
