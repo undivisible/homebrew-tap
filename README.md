@@ -11,7 +11,7 @@ Personal Homebrew formulae for [undivisible](https://github.com/undivisible).
 | `folk-around` | MCP agent for computer control ([undivisible/folk-around](https://github.com/undivisible/folk-around)) |
 | `poke-around` | Expose your machine to your Poke AI assistant via an MCP tunnel ([undivisible/poke-around](https://github.com/undivisible/poke-around)) |
 | `drift-wallpaper` | Fluid live wallpaper for macOS, Windows, and Linux ([undivisible/drift-wallpaper](https://github.com/undivisible/drift-wallpaper)) |
-| `unthinkclaw` | Lightweight AI agent runtime ([undivisible/unthinkclaw](https://github.com/undivisible/unthinkclaw)) |
+| `apollo` | Lightweight AI agent runtime / openclaw for builders ([tschk/apollo](https://github.com/tschk/apollo); formerly `unthinkclaw`) |
 | `rs-peekaboo` | Rust-native cross-platform computer-use CLI and library ([undivisible/rs_peekaboo](https://github.com/undivisible/rs_peekaboo)) |
 | `herdr-gui` | macOS GUI for Herdr (Apple Silicon) ([undivisible/herdr-gui](https://github.com/undivisible/herdr-gui)) |
 | `rx4` | Agent harness engine — loop, tools, providers, sessions, permissions, computer-use ([tschk/rotary](https://github.com/tschk/rotary)) |
@@ -69,6 +69,9 @@ brew install vro
 ## Notes
 
 - **vro** installs prebuilt GitHub Release binaries. Release assets include `*.sha256` for manual checks (`shasum -a 256 -c …`). Refresh formula checksums with `bash /path/to/vro/scripts/print-release-shas.sh v1.2.3` (example).
-- **herdr-gui** is macOS Apple Silicon only.
+- **apollo** replaces the old `unthinkclaw` formula. The GitHub repo `undivisible/unthinkclaw` redirects to `tschk/apollo`; install with `wax install apollo` / `brew install apollo`.
+- **herdr-gui** is macOS Apple Silicon only (upstream ships no Intel bottle).
 - **oil** builds from source and needs a Rust toolchain.
-- **inauguration** currently ships macOS ARM and Linux x86_64 bottles.
+- **inauguration** currently ships macOS ARM and Linux x86_64 bottles (no macOS Intel asset upstream).
+- **Missing macOS Intel bottles:** upstream releases currently omit macOS x86_64 for `vro`, `folk-around`, `inauguration`, and `herdr-gui`. Formulae only list platforms that have live release assets — do not invent Intel URLs/checksums.
+- **Version lag:** some formulae can trail GitHub “latest” (or temporarily look ahead if a tag is unpublished). Run `bash scripts/audit-formulas.sh` (add `--strict` in CI to fail on stale). Prefer verified one-off bumps over mass-bumping every formula.
