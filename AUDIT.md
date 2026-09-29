@@ -45,3 +45,7 @@ Method: `curl -sI`/`curl -sL` against public GitHub web endpoints (the GitHub RE
 
 - `scripts/audit-formulas.sh` could not be executed here: it requires `ruby` (for `ruby -c`) and an authenticated `gh` CLI; neither was available in this environment. It now has usage docs in `README.md`.
 - GitHub REST API was rate-limited (shared IP); all verification used web endpoints instead.
+
+## Safe scope
+
+No invented checksums. No unthinkclaw bump in this audit (the `unthinkclaw` → `apollo` rename landed separately in #3). Docs + tk URL canonicalize only.
