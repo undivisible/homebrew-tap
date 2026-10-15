@@ -1,8 +1,8 @@
 class Rx4 < Formula
   desc "Agent harness engine — loop, tools, providers, sessions, permissions, computer-use"
   homepage "https://github.com/tschk/rotary"
-  url "https://github.com/tschk/rotary/archive/refs/tags/v0.6.5.tar.gz"
-  sha256 "d061356974056befac4db5a6d3ad8edc7de28bc78ce49df4c6ba3769b090a0f7"
+  url "https://github.com/tschk/rotary/archive/refs/tags/v0.7.5.tar.gz"
+  sha256 "3ab20b05d033d37ff691573c33b520c5ebbf58e35b2b7b3d3d90c20357a33c7c"
   head "https://github.com/tschk/rotary.git", branch: "main"
   license "MPL-2.0"
 
