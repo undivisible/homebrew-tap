@@ -1,10 +1,10 @@
 class RsPeekaboo < Formula
   desc "Rust-native cross-platform computer-use CLI and library"
   homepage "https://github.com/undivisible/rs_peekaboo"
-  url "https://github.com/undivisible/rs_peekaboo/archive/refs/tags/v0.3.4.tar.gz"
-  sha256 "9480fc91a9f8ea6e3e635acad54bc46a9d59206c17f93be3d211dd1d1c3cd5ca"
+  url "https://github.com/undivisible/rs_peekaboo/archive/refs/tags/v0.3.5.tar.gz"
+  sha256 "f5d38bae2f9dd39f4f627e57e85e84d1002db027e0999b709c88764b8bd91097"
   license "MPL-2.0"
-  version "0.3.4"
+  version "0.3.5"
 
   depends_on "rust" => :build
 
